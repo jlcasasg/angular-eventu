@@ -1,0 +1,12 @@
+<div class="card-wrapper">
+    <div class="card-chip">{{event.type}}</div>
+    <div class="img-bg" [ngStyle]="{'background': 'url(' + event.pictures[0] + ') no-repeat 50% 50% / cover'}">
+        <div class="card-title">{{event.init_presentation_date | date:'dd'}}</div>
+    </div>
+    <div class="card-content">
+        {{event.description}}
+    </div>
+    <div class="card-footer">
+        <button>Go</button>
+    </div>
+</div>

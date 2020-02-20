@@ -1,0 +1,36 @@
+header {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    color: var(--light);
+    align-items: center;
+    padding: 16px;
+}
+
+.title {
+    padding-left: 15px;
+}
+
+.menu {
+    ul {
+        display: flex;
+        li{
+            list-style: none;
+            button {
+                background-color: transparent;
+                color: var(--light);
+                padding: 10px 25px;
+                border: solid 2px var(--secondary);
+                margin: 0 15px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+                    .active {
+                            background-color: var(--secondary);
+                            color: var(--light);
+                            font-weight: 600;
+                    }
+            }
+        }
+    }
+    
