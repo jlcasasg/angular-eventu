@@ -1,0 +1,9 @@
+.wrapper {
+    margin-top: 70px;
+    height: 93vh;
+    padding: 16px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+        width: 0;
+    }
+}

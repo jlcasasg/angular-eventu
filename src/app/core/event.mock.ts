@@ -3,7 +3,7 @@ import { EventModel } from '../shared/models/event.model';
 export const events: Array<EventModel> = [
     {
         name: 'Evento 1',
-        description: 'The best event in the world',
+        description: 'The best event in the world, The best event in the world,The best event in the world,The best event in the world The best event in the world,The best event in the world,The best event in the world, The best event in the world,The best event in the world The best event in the worldThe best event in the worldThe best event in the world',
         localization: {
             lat: 1,
             long: 1,

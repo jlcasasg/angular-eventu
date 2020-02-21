@@ -1,5 +1,5 @@
-<div class="card-layout" *ngFor="let event of eventList">
-    <div>
-        <app-event-card [event]="event"></app-event-card>
+<div class="card-layout">
+    <div class="event-card" *ngFor="let event of eventList">
+        <app-event-card [event]="event" [routerLink]="['/event',event.id]"></app-event-card>
     </div>
 </div>

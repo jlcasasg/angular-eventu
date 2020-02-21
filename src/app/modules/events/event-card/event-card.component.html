@@ -1,9 +1,23 @@
 <div class="card-wrapper">
     <div class="card-chip">{{event.type}}</div>
     <div class="img-bg" [ngStyle]="{'background': 'url(' + event.pictures[0] + ') no-repeat 50% 50% / cover'}">
-        <div class="card-title">{{event.init_presentation_date | date:'dd'}}</div>
+        <div class="card-title">
+            <p>
+                {{event.init_presentation_date | date:'dd-MMM'}}
+            </p>
+        </div>
     </div>
     <div class="card-content">
+        <div class="date">
+            <div>
+                <p>{{event.init_presentation_date | date:'hh:mm'}} -
+                    {{event.end_presentation_date | date:'hh:mm'}}
+                </p>
+            </div>
+            <div>
+                <fa-icon [icon]="faClock"> </fa-icon>
+            </div>
+        </div>
         {{event.description}}
     </div>
     <div class="card-footer">

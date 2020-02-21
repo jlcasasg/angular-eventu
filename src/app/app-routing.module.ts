@@ -1,24 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './modules/auth/login/login.component';
-import { SignupComponent } from './modules/auth/signup/signup.component';
-import { EventsComponent } from './modules/events/events.component';
-
 
 const routes: Routes = [
   {
     path: '',
-    component: EventsComponent,
-    pathMatch: 'full'
+    loadChildren: () => import('./modules/events/events.module').then(m => m.EventsModule),
   },
   {
-    path: 'login',
-    component: LoginComponent,
+    path: 'auth',
+    loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule),
   },
-  {
-    path: 'signup',
-    component: SignupComponent,
-  }
 ];
 
 @NgModule({

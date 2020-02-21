@@ -1,6 +1,6 @@
 .card-layout {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    max-width: 100%;
+    flex-wrap: wrap;
 }
-
-.div{max-width:300px;}

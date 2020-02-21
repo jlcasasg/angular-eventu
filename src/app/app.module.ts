@@ -7,6 +7,8 @@ import { HeaderComponent } from './layout/header/header.component';
 import { AuthModule } from './modules/auth/auth.module';
 import { EventsModule } from './modules/events/events.module';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,9 +16,10 @@ import { EventsModule } from './modules/events/events.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    FontAwesomeModule,
     AuthModule,
     EventsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
