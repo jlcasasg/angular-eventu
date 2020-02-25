@@ -13,7 +13,19 @@ export const events: Array<EventModel> = [
         end_presentation_date: new Date('2020-10-14'),
         likes: 10,
         type: 'Social',
-        pictures: ['https://images.pexels.com/photos/3755760/pexels-photo-3755760.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'],
+        pictures: [
+            {
+                src: 'https://images.pexels.com/photos/3755760/pexels-photo-3755760.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+                name: 'Image 1'
+            },
+            {
+                src: 'https://images.pexels.com/photos/1632071/pexels-photo-1632071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                name: 'Image 1'
+            },
+            {
+                src: 'https://images.pexels.com/photos/3393793/pexels-photo-3393793.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+                name: 'Image 1'
+            }],
         id: 1,
         owner: 1,
     },
@@ -29,7 +41,19 @@ export const events: Array<EventModel> = [
         end_presentation_date: new Date('2020-10-14'),
         likes: 10,
         type: 'Social',
-        pictures: ['https://images.pexels.com/photos/3755760/pexels-photo-3755760.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'],
+        pictures: [
+            {
+                src: 'https://images.pexels.com/photos/3755760/pexels-photo-3755760.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+                name: 'Image 1'
+            },
+            {
+                src: 'https://images.pexels.com/photos/1632071/pexels-photo-1632071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                name: 'Image 1'
+            },
+            {
+                src: 'https://images.pexels.com/photos/3393793/pexels-photo-3393793.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+                name: 'Image 1'
+            }],
         id: 1,
         owner: 1,
     },
@@ -45,7 +69,19 @@ export const events: Array<EventModel> = [
         end_presentation_date: new Date('2020-10-14'),
         likes: 10,
         type: 'Social',
-        pictures: ['https://images.pexels.com/photos/3755760/pexels-photo-3755760.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'],
+        pictures: [
+            {
+                src: 'https://images.pexels.com/photos/3755760/pexels-photo-3755760.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+                name: 'Image 1'
+            },
+            {
+                src: 'https://images.pexels.com/photos/1632071/pexels-photo-1632071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                name: 'Image 1'
+            },
+            {
+                src: 'https://images.pexels.com/photos/3393793/pexels-photo-3393793.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+                name: 'Image 1'
+            }],
         id: 1,
         owner: 1,
     },
@@ -61,8 +97,19 @@ export const events: Array<EventModel> = [
         end_presentation_date: new Date('2020-10-14'),
         likes: 10,
         type: 'Social',
-        pictures: ['https://images.pexels.com/photos/3755760/pexels-photo-3755760.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'],
-        id: 1,
+        pictures: [
+            {
+                src: 'https://images.pexels.com/photos/3755760/pexels-photo-3755760.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+                name: 'Image 1'
+            },
+            {
+                src: 'https://images.pexels.com/photos/1632071/pexels-photo-1632071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                name: 'Image 1'
+            },
+            {
+                src: 'https://images.pexels.com/photos/3393793/pexels-photo-3393793.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+                name: 'Image 1'
+            }], id: 1,
         owner: 1,
     },
     {
@@ -77,8 +124,19 @@ export const events: Array<EventModel> = [
         end_presentation_date: new Date('2020-10-14'),
         likes: 10,
         type: 'Social',
-        pictures: ['https://images.pexels.com/photos/3755760/pexels-photo-3755760.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'],
-        id: 1,
+        pictures: [
+            {
+                src: 'https://images.pexels.com/photos/3755760/pexels-photo-3755760.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+                name: 'Image 1'
+            },
+            {
+                src: 'https://images.pexels.com/photos/1632071/pexels-photo-1632071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                name: 'Image 1'
+            },
+            {
+                src: 'https://images.pexels.com/photos/3393793/pexels-photo-3393793.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+                name: 'Image 1'
+            }], id: 1,
         owner: 1,
     },
 ]

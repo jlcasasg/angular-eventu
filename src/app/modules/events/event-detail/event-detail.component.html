@@ -1,40 +1,42 @@
 <div class="grid">
-    <div class="title">
-        <h1>{{event?.name}}</h1>
-    </div>
-    <div class="detail">
-        <div class="information">
-            <section class="place__info">
-                <h2 class="information__title">The Event</h2>
-                <div class="information__desc">{{event?.description}}</div>
-            </section>
-            <section class="owner__info">
-                <h2 class="information__title">The Owner</h2>
-                <div class="information__desc">
-                    USER_PROFILE_INFORMATION
-                </div>
-            </section>
-            <section class="date__info">
-                <h2 class="information__title">The Date</h2>
-                <div class="information__desc">
-                    <p>
-                        <fa-icon [icon]="calendarIcon"></fa-icon>
-                        {{event.init_presentation_date | date:'dd/MM/yyyy-HH:mm'}}
-                        /
-                        {{event.end_presentation_date | date:'dd/MM/yyyy-HH:mm'}}
-                    </p>
-                </div>
-
-            </section>
-            <section class="location__info">
-                <h2 class="information__title">The Location</h2>
-                <div class="information__desc">
-                    GOOGLE MAPS
-                </div>
-            </section>
+  <div class="title">
+    <h1>{{event?.name}}</h1>
+  </div>
+  <div class="detail">
+    <div class="information">
+      <section class="place__info">
+        <h2 class="information__title">The Event</h2>
+        <div class="information__desc">{{event?.description}}</div>
+      </section>
+      <section class="owner__info">
+        <h2 class="information__title">The Owner</h2>
+        <div class="information__desc">
+          USER_PROFILE_INFORMATION
         </div>
-        <div class="pictures">
-            <!--Make carrousel!-->
-            <img src="{{event.pictures[0]}}"> </div>
+      </section>
+      <section class="date__info">
+        <h2 class="information__title">The Date</h2>
+        <div class="information__desc">
+          <p>
+            <fa-icon [icon]="calendarIcon"></fa-icon>
+            {{event.init_presentation_date | date:'dd/MM/yyyy-HH:mm'}}
+            ~
+            {{event.end_presentation_date | date:'dd/MM/yyyy-HH:mm'}}
+          </p>
+        </div>
+
+      </section>
+      <section class="location__info">
+        <h2 class="information__title">The Location</h2>
+        <div class="information__desc">
+          GOOGLE MAPS
+        </div>
+      </section>
     </div>
+    <div class="pictures">
+      <app-slider [slider]="event.pictures">
+      </app-slider>
+
+    </div>
+  </div>
 </div>

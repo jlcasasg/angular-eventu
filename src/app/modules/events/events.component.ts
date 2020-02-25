@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventModel } from 'src/app/shared/models/event.model';
-import { events } from 'src/app/core/event.mock';
+import { Observable } from 'rxjs';
+import { EventService } from './event.service';
 
 @Component({
   selector: 'app-events',
@@ -9,13 +10,18 @@ import { events } from 'src/app/core/event.mock';
 })
 export class EventsComponent implements OnInit {
 
-  events: Array<EventModel>
-
-  constructor() {
-    this.events = events;
+  events$: Observable<Array<EventModel>>;
+  
+  constructor(
+    private eventService: EventService,
+  ) {
+    
   }
 
   ngOnInit() {
+    this.events$ = this.eventService.getEvents();
+    console.log(this.events$);
+    
   }
 
 }
