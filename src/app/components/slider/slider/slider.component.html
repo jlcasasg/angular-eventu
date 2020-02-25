@@ -1,7 +1,8 @@
 <!-- carousel -->
 <div class="carousel">
   <ng-container *ngFor="let slide of slider; let i = index">
-    <img [src]="slide.src" *ngIf="i === currentSlide" class="slide" @carouselAnimation />
+    <img [src]="slide?.src" *ngIf="i === currentSlide" class="slide"
+      [@carouselAnimation]="{value: '*', params: {width: imageWidth, speed: speed }}" />
   </ng-container>
 
   <!-- controls -->

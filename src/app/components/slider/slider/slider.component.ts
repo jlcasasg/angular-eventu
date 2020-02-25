@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, AfterContentChecked, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 import { transition, trigger, style, animate } from '@angular/animations';
 
 @Component({
@@ -8,27 +8,35 @@ import { transition, trigger, style, animate } from '@angular/animations';
   animations: [
     trigger('carouselAnimation', [
       transition('void => *', [
-        style({ left: 500 }),
-        animate('600ms', style({ left: 0 }))
+        style({ left: '{{width}}' }),
+        animate('{{speed}}', style({ left: 0, right: 0 }))
       ]),
       transition('* => void', [
-        animate('600ms', style({ left: 500, right: 0 }))
-      ])
+        animate('{{speed}}', style({ left: '-{{width}}', right: '{{width}}' }))
+      ], { params: { width: '500px', speed: '600ms' } })
     ])
   ]
 })
-export class SliderComponent implements OnInit {
+export class SliderComponent implements AfterViewInit {
 
   @Input() slider: Array<any>;
   @Input() canShowControls: boolean = true;
 
-  currentSlide: number;
 
-  constructor() {
+  currentSlide: number;
+  imageWidth: string;
+  speed: string;
+
+  constructor(private cdr: ChangeDetectorRef) {
     this.currentSlide = 0;
+    this.imageWidth = '300px';
+    this.speed = '600ms';
   }
 
-  ngOnInit() {
+  ngAfterViewInit() {
+    const image = ((document.getElementsByClassName('slide')[0] as HTMLImageElement));
+    this.imageWidth = (image.width) + 'px';
+    this.speed = (image.width) + 'ms';
   }
 
   prev() {
