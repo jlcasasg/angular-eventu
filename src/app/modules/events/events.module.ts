@@ -17,7 +17,6 @@ import { SliderModule } from 'src/app/components/slider/slider.module';
     EventDetailComponent,
   ],
   imports: [
-    CommonModule,
     SharedModule,
     EventsRoutingModule,
     SliderModule,

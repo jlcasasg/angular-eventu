@@ -8,6 +8,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { EventsModule } from './modules/events/events.module';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { UserChipComponent } from './shared/components/user-chip/user-chip.component';
 
 @NgModule({
   declarations: [
