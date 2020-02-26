@@ -12,7 +12,7 @@ export interface EventModel {
     max_inscription_date: Date;
     init_presentation_date: Date;
     end_presentation_date: Date;
-    likes: number,
+    raiting: number,
     type: 'Social' | 'Cultural' | 'Academic';
     pictures: Array<any>,
     owner: number,

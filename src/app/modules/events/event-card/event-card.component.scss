@@ -14,12 +14,14 @@
     flex-direction: column;
     cursor: pointer;
 }
-
+.line-break{
+    white-space: pre-wrap;
+    line-height: 2.4rem;
+}
 .card-chip{
     position: absolute;
     top: 10px;
     left: -10px;
-    background-color: var(--primary);
     color: var(--light);
     padding: 8px 8px;
     border-radius: 4px;

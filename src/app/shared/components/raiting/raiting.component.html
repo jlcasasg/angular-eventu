@@ -1,0 +1,7 @@
+<div class="raiting-container">
+    <div class="star" [ngClass]="{'canVote': canVote}">
+        <li *ngFor="let i of stars; let i = index" [ngClass]="{'active' : i <= value}">
+            <fa-icon id="rating{{i}}" [icon]="starIcon" (click)="vote(i)"></fa-icon>
+        </li>
+    </div>
+</div>

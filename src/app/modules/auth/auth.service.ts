@@ -11,7 +11,6 @@ export class AuthService {
   constructor() { }
 
   getUserById(id: number): Observable<User> {
-    console.log(users.find(item => item.id === id), id);
     return of(users.find(item => item.id === id));
   }
 }

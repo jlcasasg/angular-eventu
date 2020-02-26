@@ -11,17 +11,15 @@ import { EventService } from './event.service';
 export class EventsComponent implements OnInit {
 
   events$: Observable<Array<EventModel>>;
-  
+
   constructor(
     private eventService: EventService,
   ) {
-    
+
   }
 
   ngOnInit() {
     this.events$ = this.eventService.getEvents();
-    console.log(this.events$);
-    
   }
 
 }

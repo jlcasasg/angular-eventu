@@ -1,0 +1,26 @@
+.raiting-container{
+    display: flex;
+}
+.active{
+    color: gold !important;
+}
+
+.star {
+    color: var(--light-gray);
+    list-style: none;
+    display: inline-block;
+}
+
+.star li{
+    color: var(--light-gray);
+    float: right;
+}
+
+.canVote{
+    cursor: pointer;
+}
+
+.canVote li:hover,
+.canVote li:hover ~ li {
+    color: gold;
+}

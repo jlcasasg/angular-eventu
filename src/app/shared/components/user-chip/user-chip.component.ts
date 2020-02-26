@@ -16,8 +16,6 @@ export class UserChipComponent implements OnInit {
   constructor(private auth: AuthService, ) { }
 
   ngOnInit() {
-    console.log(this.userId);
-    
     this.auth.getUserById(this.userId).subscribe((user) => this.user = user);
   }
 

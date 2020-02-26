@@ -8,7 +8,8 @@ import { AuthModule } from './modules/auth/auth.module';
 import { EventsModule } from './modules/events/events.module';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { UserChipComponent } from './shared/components/user-chip/user-chip.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RaitingComponent } from './shared/components/raiting/raiting.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { UserChipComponent } from './shared/components/user-chip/user-chip.compo
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FontAwesomeModule,
     AuthModule,
     EventsModule,

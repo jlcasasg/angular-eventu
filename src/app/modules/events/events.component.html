@@ -1,4 +1,6 @@
-<div class="events-container">
-    <app-event-list [eventList]="events$ | async">
-    </app-event-list>
-</div>                      
+<router-outlet>
+    <div class="events-container">
+        <app-event-list [eventList]="events$ | async">
+        </app-event-list>
+    </div>
+</router-outlet>

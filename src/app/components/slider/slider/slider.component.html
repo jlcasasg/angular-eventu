@@ -12,4 +12,10 @@
   <button class="control next" (click)="next()">
     <span class="arrow right"></span>
   </button>
+  <div class="bullets-container">
+    <div class="bullets">
+      <div  [ngClass]="{'active' : (i === currentSlide)}" (click)="setSlider(i)" class="bullet" *ngFor="let bullet of slider; let i = index">
+      </div>
+    </div>
+  </div>
 </div>

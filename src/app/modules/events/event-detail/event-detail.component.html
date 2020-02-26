@@ -6,6 +6,8 @@
     <div class="information">
       <section class="place__info">
         <h2 class="information__title">The Event</h2>
+        <div class="card-chip" [appEventType]="event.type">{{event.type}}</div>
+        <app-raiting [value]="event?.raiting"></app-raiting>
         <div class="information__desc">{{event?.description}}</div>
       </section>
       <section class="owner__info">
@@ -19,9 +21,7 @@
         <div class="information__desc">
           <p>
             <fa-icon [icon]="calendarIcon"></fa-icon>
-            {{event.init_presentation_date | date:'dd/MM/yyyy-HH:mm'}}
-            ~
-            {{event.end_presentation_date | date:'dd/MM/yyyy-HH:mm'}}
+            {{event.init_presentation_date | displayDate: event.end_presentation_date: 'long'}}
           </p>
         </div>
 

@@ -5,12 +5,19 @@ import { EventDetailComponent } from './event-detail/event-detail.component';
 
 const routes: Routes = [
     {
-        path: '',
+        path: 'events',
         component: EventsComponent,
+      
     },
     {
-        path: 'event/:id', component: EventDetailComponent,
-    }
+        path: 'events/event/:id',
+        component: EventDetailComponent,
+    },
+    {
+        path: '',
+        redirectTo: '/events',
+        pathMatch: 'full'
+    },
 ];
 
 

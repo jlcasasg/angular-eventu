@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, AfterContentChecked, AfterViewInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, AfterContentChecked, AfterViewInit, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
 import { transition, trigger, style, animate } from '@angular/animations';
 
 @Component({
@@ -15,7 +15,8 @@ import { transition, trigger, style, animate } from '@angular/animations';
         animate('{{speed}}', style({ left: '-{{width}}', right: '{{width}}' }))
       ], { params: { width: '500px', speed: '600ms' } })
     ])
-  ]
+  ],  
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SliderComponent implements AfterViewInit {
 
@@ -47,5 +48,9 @@ export class SliderComponent implements AfterViewInit {
   next() {
     const next = this.currentSlide + 1;
     this.currentSlide = next === this.slider.length ? 0 : next;
+  }
+
+  setSlider(index) {
+    this.currentSlide = index;
   }
 }
