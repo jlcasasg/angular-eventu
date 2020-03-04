@@ -2,7 +2,7 @@ import { User } from './user.model';
 
 export interface Localization {
     lat: number;
-    long: number;
+    lng: number;
 }
 
 export interface EventModel {
@@ -17,4 +17,5 @@ export interface EventModel {
     pictures: Array<any>,
     owner: number,
     id: number;
+    spectators: number;
 }
